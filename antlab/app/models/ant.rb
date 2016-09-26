@@ -1,7 +1,7 @@
 class Ant
 	include HTTParty
-	#base_uri 'http://www.antweb.org/api/v2/'	
-	base_uri ENV["ant_API"]
+	base_uri 'http://www.antweb.org/api/v2/'	
+	#base_uri ENV["ant_API"]
 	default_params fields: "images", q: "search"
 	format :json
 
