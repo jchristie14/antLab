@@ -10,6 +10,13 @@ class ExplorationsController < ApplicationController
   # GET /explorations/1
   # GET /explorations/1.json
   def show
+    #@articles = Article.all
+    lat = Exploration.last.latitude
+    long = Exploration.last.longitude
+    @coords = "#{lat},#{long}"
+    rawants = Ant.new(@coords, 700).samples
+    @ants = rawants["images"]#[0]["genus"]
+    @antIm = (rawants.to_s).scan(/http\S+jpg/)
   end
 
   # GET /explorations/new

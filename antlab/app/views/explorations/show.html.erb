@@ -1,4 +1,16 @@
-<p id="notice"><%= notice %></p>
+  <h3>Here are samples found near the location you entered!</h3>
+  <%#= @coords %>
+
+  <%#= @ants.class %>
+  <%= @ants %>
+  <br>
+  <% @antIm.each do |ant| %>
+  <%= image_tag ant %>
+  <% end %>
+
+
+
+<!-- <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Location:</strong>
@@ -16,4 +28,4 @@
 </p>
 
 <%= link_to 'Edit', edit_exploration_path(@exploration) %> |
-<%= link_to 'Back', explorations_path %>
+<%= link_to 'Back', explorations_path %> -->
