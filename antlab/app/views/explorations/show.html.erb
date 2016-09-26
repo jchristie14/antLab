@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @exploration.location %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @exploration.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @exploration.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_exploration_path(@exploration) %> |
+<%= link_to 'Back', explorations_path %>

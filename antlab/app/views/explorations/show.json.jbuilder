@@ -1,0 +1,1 @@
+json.partial! "explorations/exploration", exploration: @exploration

@@ -1,0 +1,32 @@
+<%= form_for(exploration) do |f| %>
+  <% if exploration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(exploration.errors.count, "error") %> prohibited this exploration from being saved:</h2>
+
+      <ul>
+      <% exploration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :latitude %>
+    <%= f.text_field :latitude %>
+  </div>
+
+  <div class="field">
+    <%= f.label :longitude %>
+    <%= f.text_field :longitude %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

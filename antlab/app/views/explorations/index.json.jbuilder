@@ -1,0 +1,1 @@
+json.array! @explorations, partial: 'explorations/exploration', as: :exploration
