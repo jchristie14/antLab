@@ -1,4 +1,8 @@
 <p>
+  <strong>Picture:</strong>
+  <%= image_tag @article.image_url(:thumb).to_s %>
+
+<p>
   <strong>Title:</strong>
   <%= @article.title %>
 <p>

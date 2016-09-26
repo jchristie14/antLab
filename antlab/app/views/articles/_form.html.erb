@@ -12,6 +12,14 @@
       </ul>
     </div>
   <% end %>
+  <p>
+    <%= f.file_field :image %>
+  </p>
+
+  <p>
+    <%= f.label :remote_image_url, "or image URL" %><br>
+    <%= f.text_field :remote_image_url %>
+  </p>
 
   <p>
     <%= f.label :title %><br>
