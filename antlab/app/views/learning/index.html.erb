@@ -1,18 +1,53 @@
 
 	<title>Cool if it works</title>
 
+  <dialog id="favDialog">
+  <form method="dialog">
+    <section>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+      </p>
+    </section>
+    <menu>
+      <button id="cancel" type="reset">Close</button>
+    </menu>
+  </form>
+</dialog>
+
+
   
  
 
   <img id="lowlight" src="/assets/twoAnts.png" usemap="#primary" usemap="#second" />
 
   	<map  name="primary">
-  	<area id="area" shape="rectangle" coords="0,0,200,200" href="#" /> 
+  	<area id="area" shape="rectangle" coords="0,0,200,200" href="javascript:var favDialog = document.getElementById('favDialog');
+    favDialog.showModal();" /> 
   
 
   	 <map  name="second">
-  	<area id="area" shape="rectangle" coords="200,200,400,400" href="#" />
+  	<area id="area" shape="rectangle" coords="200,200,400,400" href="./_leg.html.erb" />
   </map>
-  <dialog open>
+  <dialog>
     <p>dfdfd</p>
   </dialog>
+
+<script>
+(function() {
+    $( document ).ready(function() {
+    console.log( "ready!" );
+    $('#lowlight').maphilight()
+      });
+    $('')
+
+    var cancelButton = document.getElementById('cancel');
+    cancelButton.addEventListener('click', function() {
+      favDialog.close();
+    });
+
+
+})();
+
+
+</script>

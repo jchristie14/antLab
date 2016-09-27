@@ -365,9 +365,4 @@
 	};
 });
 
-$( document ).ready(function() {
-    console.log( "ready!" );
-    $('#lowlight').maphilight()
-});
 
-   // $('#lowlite').maphilight()
