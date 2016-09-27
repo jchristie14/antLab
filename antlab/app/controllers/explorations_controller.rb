@@ -1,35 +1,33 @@
 class ExplorationsController < ApplicationController
-  before_action :set_exploration, only: [:show, :edit, :update, :destroy]
+  #before_action :set_exploration, only: [:show, :edit, :update, :destroy]
 
-  # GET /explorations
-  # GET /explorations.json
+
   def index
     @explorations = Exploration.all
   end
 
-  # GET /explorations/1
-  # GET /explorations/1.json
+
   def show
-    #@articles = Article.all
+    
     lat = Exploration.last.latitude
     long = Exploration.last.longitude
+    @place = Exploration.last.location
     @coords = "#{lat},#{long}"
-    rawants = Ant.new(@coords, 700).samples
-    @ants = rawants["images"]#[0]["genus"]
+    rawants = Ant.new(@coords, 200).samples
+    @ants = rawants["specimens"][0]["genus"]
     @antIm = (rawants.to_s).scan(/http\S+jpg/)
+
   end
 
-  # GET /explorations/new
+
   def new
     @exploration = Exploration.new
   end
 
-  # GET /explorations/1/edit
+  
   def edit
   end
 
-  # POST /explorations
-  # POST /explorations.json
   def create
     @exploration = Exploration.new(exploration_params)
 
