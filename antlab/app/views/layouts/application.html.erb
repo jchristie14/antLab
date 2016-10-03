@@ -9,8 +9,9 @@
   </head>
 
   <body>
-<header>
-<div id="devise">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
 <p>
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
@@ -21,21 +22,17 @@
       <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
     <% end %>
 </p>
-</div>
-<div id="navlinks">
-<div>
-<%= link_to 'Compare & Discuss Samples', controller: articles_path %>
-</div>
 
-<div>
-<%= link_to 'Explore Other Samples', explorations_path %>
-</div>
+<%= link_to 'Welcome', to: :root, controller: '/welcome' %>
 
-<div>
-<%= link_to 'Learn!', to: :index, controller: 'learning' %>
+<%= link_to 'CRUD & Upload', controller: articles_path %>
+
+<%= link_to 'API', explorations_path %>
+
+<%= link_to 'Display', to: :index, controller: '/learning' %>
 </div>
 </div>
-</header>
+</nav>
   
 
     <%= yield %>

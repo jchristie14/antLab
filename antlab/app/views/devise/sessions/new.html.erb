@@ -1,4 +1,7 @@
+<div class="container">
+
 <h2>Log in</h2>
+
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -24,3 +27,12 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<br>
+<br>
+<h3>AntLab does not check for valid e-mails<br>Please login using the following information:</h3>
+<br>
+<h3><strong>Username:</strong> visitor@mail</h3>
+<h3><strong>Password:</strong> 123456</h3>
+
+</div>
