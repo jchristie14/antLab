@@ -1,9 +1,36 @@
+<div class="container">
+  <div class="blog-header">
+    <h2 class="blog-title">The Ant Forum</h2>
+    <p class="lead blog-description">A CRUD app that includes an uploader</p>
+  </div>
 
-<h1>Listing Articles</h1>
+<% @articles.each do |article| %>
+
+  <div class="row">
+    <div class="col-sm-8 blog-main">
+      <div class="blog-post">
+        <h2 class="blog-post-title"><%= article.title %></h2>
+        <%= image_tag article.image_url(:thumb).to_s %>
+        
+        <p><%= article.text %></p>
+        <%= link_to 'Show', article_path(article) %>
+
+              <% if current_user[:id] === article.user_id %>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+        <td><%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %></td>  
+      <% end %>
+      <hr>
+
+  <% end %>
+
+
 
 <%= link_to 'New article', new_article_path %>
 
-<table>
+
+<!-- <h1>Listing Posts</h1>
+ -->
+<!-- <table>
   <tr>
     <th>Picture</th>
     <th>Title</th>
@@ -11,18 +38,13 @@
     <th colspan = "2"></th>
   </tr>
 
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= image_tag article.image_url(:thumb).to_s %>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
 
-      <% if current_user[:id] === article.user_id %>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %></td>  
-      <% end %>
-      
-    </tr>
-  <% end %>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+
+
 </table>
+
+</div> -->

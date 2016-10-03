@@ -1,9 +1,10 @@
+
 <%= form_for @article do |f| %>
 
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:
+        <%= pluralize(@article.errors.count, "error") %> prohibited this post from being saved:
       </h2>
       <ul>
         <% @article.errors.full_messages.each do |msg| %>
@@ -12,26 +13,27 @@
       </ul>
     </div>
   <% end %>
-  <p>
+  <p class="createPost">
+    Upload an image
     <%= f.file_field :image %>
   </p>
 
-  <p>
-    <%= f.label :remote_image_url, "or image URL" %><br>
-    <%= f.text_field :remote_image_url %>
-  </p>
+<!--   <p> -->
+    <%#= f.label :remote_image_url, "or image URL" %><br>
+    <%#= f.text_field :remote_image_url %>
+<!--   </p> -->
 
-  <p>
+  <p class="createPost">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
 
-  <p>
+  <p class="createPost">
     <%= f.label :text %><br>
     <%= f.text_area :text %>
   </p>
 
-  <p>
+  <p class="createPost">
     <%= f.submit %>
   </p>
 <% end %>
