@@ -1,5 +1,14 @@
-<h1>Explore!</h1>
+<div class="container">
+
+<div class="blog-header">
+<h1 class="blog-title">Explore!</h1>
+
+<p class="lead blog-description">In this section, the user is invited to enter a location. The geocoder gem returns the latitude and longitude of the entered location and returns samples provided by <a href="http://www.antweb.org/">antweb.org</a>.</p>
+</div>
+<hr>
 
 <%= render 'form', exploration: @exploration %>
 
 <%= link_to 'Back', explorations_path %>
+
+</div>
