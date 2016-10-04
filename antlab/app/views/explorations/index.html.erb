@@ -15,30 +15,6 @@
 </div>
 
 
-<!-- <table>
-  <thead>
-    <tr>
-      <th>Location</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @explorations.each do |exploration| %>
-      <tr>
-        <td><%= exploration.location %></td>
-        <td><%= exploration.latitude %></td>
-        <td><%= exploration.longitude %></td>
-        <td><%= link_to 'Show', exploration %></td>
-        <td><%= link_to 'Edit', edit_exploration_path(exploration) %></td>
-        <td><%= link_to 'Destroy', exploration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> -->
-
 <br>
 
 <%= link_to 'See what people have found!', new_exploration_path %>
