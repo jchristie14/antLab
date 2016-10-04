@@ -345,7 +345,7 @@
 		fillColor: 'ffffff',
 		fillOpacity: 0.2,
 		stroke: true,
-		strokeColor: 'ff0000',
+		strokeColor: 'ffffff',
 		strokeOpacity: 1,
 		strokeWidth: 1,
 		fade: true,

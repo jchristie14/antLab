@@ -4,12 +4,12 @@
 
 </div>
 
-  <dialog id="favDialog">
+  <dialog id="anthill">
   <form method="dialog">
     <section>
+      <h3>Ant-hill</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+        An ant-hill, in its simplest form, is a pile of earth, sand, pine needles, or clay or a composite of these and other materials that build up at the entrances of the subterranean dwellings of ant colonies as they are excavated. A colony is built and maintained by legions of worker ants, who carry tiny bits of dirt and pebbles in their mandibles and deposit them near the exit of the colony. They normally deposit the dirt or vegetation at the top of the hill to prevent it from sliding back into the colony, but in some species they actively sculpt the materials into specific shapes, and may create nest chambers within the mound.
       </p>
     </section>
     <menu>
@@ -18,11 +18,26 @@
   </form>
 </dialog>
 
-  <dialog id="test">
+ <dialog id="gaster">
   <form method="dialog">
     <section>
+      <h3>Gaster</h3>
       <p>
-        test
+        The gaster is the bulbous posterior portion of the metasoma found in hymenopterans of the suborder Apocrita (bees, wasps and ants). This begins with abdominal segment III on most ants, but some make a postpetiole out of segment III, in which case the gaster begins with abdominal segment IV.
+      </p>
+    </section>
+    <menu>
+      <button id="cancel" type="reset" onclick="this.parentElement.parentElement.parentElement.close()">Close</button>
+    </menu>
+  </form>
+</dialog>
+
+  <dialog id="head">
+  <form method="dialog">
+    <section>
+    <h3>Head</h3>
+      <p>
+        An ant's head contains many sensory organs. Like most insects, ants have compound eyes made from numerous tiny lenses attached together. Ant eyes are good for acute movement detection, but do not offer a high resolution image. They also have three small ocelli (simple eyes) on the top of the head that detect light levels and polarization. Compared to vertebrates, most ants have poor-to-mediocre eyesight and a few subterranean species are completely blind. However, some ants, such as Australia's bulldog ant, have excellent vision and are capable of discriminating the distance and size of objects moving nearly a metre away.<br><br>Two antennae ("feelers") are attached to the head; these organs detect chemicals, air currents, and vibrations; they also are used to transmit and receive signals through touch. The head has two strong jaws, the mandibles, used to carry food, manipulate objects, construct nests, and for defence. In some species, a small pocket (infrabuccal chamber) inside the mouth stores food, so it may be passed to other ants or their larvae.
       </p>
     </section>
     <menu>
@@ -34,22 +49,19 @@
   
 
 
-  <img class="center-block" id="lowlight" src="http://i.imgur.com/pGbnINt.png" usemap="#primary" usemap="#thorax" />
+  <img class="center-block" id="lowlight" src="http://i.imgur.com/pGbnINt.png" usemap="#ants" />
 
 
 
 
 
-  	<map name="primary">
-  	  <area id="area" shape="rectangle" coords="0,0,200,200" href="javascript:var favDialog = document.getElementById('favDialog'); favDialog.showModal();" />
+  	<map name="ants">
+
+  	  <area id="area" shape="rectangle" coords="910,300,1365,510" href="javascript:var curDialog = document.getElementById('anthill'); curDialog.showModal();" />
  
-  	  <area id="area" shape="rectangle" coords="200,200,400,400" href="#" />
+  	  <area id="area" shape="rectangle" coords="175,400,375,560" href="javascript:var curDialog = document.getElementById('gaster'); curDialog.showModal();" />
   
-      <area id="area" shape="poly" coords="400,400,
-        400,450,
-        300,440,
-        300,300,
-        400,400" href="javascript:var favDialog = document.getElementById('test'); favDialog.showModal();" />
+      <area id="area" shape="rectangle" coords="580,400,750,520" href="javascript:var curDialog = document.getElementById('head'); curDialog.showModal();" />
     </map>
 
 
