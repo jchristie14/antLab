@@ -1,5 +1,8 @@
+<div class="container">
 
-	<title>Cool if it works</title>
+<h1>Click below to learn more about ants</h1>
+
+</div>
 
   <dialog id="favDialog">
   <form method="dialog">
@@ -10,28 +13,47 @@
       </p>
     </section>
     <menu>
-      <button id="cancel" type="reset">Close</button>
+      <button id="cancel" type="reset" onclick="this.parentElement.parentElement.parentElement.close()">Close</button>
     </menu>
   </form>
 </dialog>
 
+  <dialog id="test">
+  <form method="dialog">
+    <section>
+      <p>
+        test
+      </p>
+    </section>
+    <menu>
+      <button id="cancel" type="reset" onclick="this.parentElement.parentElement.parentElement.close()">Close</button>
+    </menu>
+  </form>
+</dialog>
 
   
+
+
+  <img class="center-block" id="lowlight" src="http://i.imgur.com/pGbnINt.png" usemap="#primary" usemap="#thorax" />
+
+
+
+
+
+  	<map name="primary">
+  	  <area id="area" shape="rectangle" coords="0,0,200,200" href="javascript:var favDialog = document.getElementById('favDialog'); favDialog.showModal();" />
  
-
-  <img id="lowlight" src="http://i.imgur.com/qOTJHZc.png" usemap="#primary" usemap="#second" />
-
-  	<map  name="primary">
-  	<area id="area" shape="rectangle" coords="0,0,200,200" href="javascript:var favDialog = document.getElementById('favDialog');
-    favDialog.showModal();" /> 
+  	  <area id="area" shape="rectangle" coords="200,200,400,400" href="#" />
   
+      <area id="area" shape="poly" coords="400,400,
+        400,450,
+        300,440,
+        300,300,
+        400,400" href="javascript:var favDialog = document.getElementById('test'); favDialog.showModal();" />
+    </map>
 
-  	 <map  name="second">
-  	<area id="area" shape="rectangle" coords="200,200,400,400" href="#" />
-  </map>
-  <dialog>
-    <p>dfdfd</p>
-  </dialog>
+
+
 
 <script>
 (function() {
@@ -41,13 +63,10 @@
       });
     $('')
 
-    var cancelButton = document.getElementById('cancel');
-    cancelButton.addEventListener('click', function() {
-      favDialog.close();
-    });
-
-
 })();
+
+
+
 
 
 </script>
