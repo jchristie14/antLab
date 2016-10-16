@@ -5,7 +5,7 @@
 
 <hr>
 
-<h3>AntLab is an educational website designed to encourageExplanation: way for young people to explore biology; learn about a life form that they can observe; share with other scientists</h3>
+<h3>AntLab encourages children to explore biology by teaching them about ants, an organism that they can easily observe.</h3>
 </div>
 </div>
 
@@ -14,17 +14,17 @@
       <div class="row">
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
           <h2>Compare</h2>
-          <p>Compare encourages users to collect their own samples and interact with the larger community through a CRUD application that includes an image uploader. Uploading is handled by carrierwave and images are stored on an Amazon Web Services database. </p>
+          <p>The Compare portion of AntLab is a CRUD app that allows users to discuss their observations and allows them to upload pictures. This portion combines a standard CRUD app with an uploader. Uploaded images are stored on Amazon Web Services.</p>
           <p><a class="btn btn-default" href="/articles" role="button">View &raquo;</a></p>
        </div>
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
           <h2>Explore</h2>
-          <p>Explore allows users to explore samples collected by real scientists in the field. Images are provided through an ajax call to <a href="http://www.antweb.org/">antweb.org</a>. Images are located using using the geocoder gem, which returns a latitude and longitude for the location entered by the user.</p>
+          <p>The Explore portion of AntLab allows users to see specimens that have been collected from their area. The user enters the name of a city; the site uses the geocoder gem to convert this city to a latitude and longitude and then returns samples collected near this area. Samples are returned via an API request to <a href="http://www.antweb.org/">antweb.org</a>.</p>
           <p><a class="btn btn-default" href="/explorations" role="button">View &raquo;</a></p>
         </div>
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
           <h2>Learn</h2>
-          <p>The Learn portion of AntLab is an interactive display that encourages users to explore different areas of the image. Learn uses HTML, CSS, and Javascript to encourage user participation.</p>
+          <p>The Learn portion of AntLab encourages users’ curiosity by presenting an image with clickable areas. When users click on an area of the picture, a dialogue box is opened that gives information about this area.</p>
           <p><a class="btn btn-default" href="/learning" role="button">View &raquo;</a></p>
         </div>
       </div>
